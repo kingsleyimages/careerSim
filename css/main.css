@@ -37,10 +37,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 2.5rem;
-  border-bottom:1px solid #FFF
+  border-bottom: 1px solid #fff;
 }
 .siteName h2 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 400;
   text-transform: uppercase;
 }
