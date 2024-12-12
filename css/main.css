@@ -1,0 +1,149 @@
+/* base and nav setup */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: 'Lato Light';
+  src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+  font-family: 'Lato Heavy';
+  src: url(../fonts/Lato-Medium.ttf);
+}
+body {
+  font-size: 16px;
+  font-family: Lato;
+}
+p {
+  font-size: 1em;
+  line-height: 1.4rem;
+  font-family: 'lato light';
+}
+header {
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.5rem;
+}
+.siteName h2 {
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+nav li,
+.footerNav li {
+  display: inline-block;
+  text-align: center;
+  padding: 5px 15px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  font-family: 'lato light';
+}
+
+nav li a,
+.footerNav li a {
+  color: #fff;
+  text-decoration: none;
+}
+nav li a:hover,
+.footerNav li a:hover {
+  color: #000;
+}
+nav li a:active {
+  border-top: 2px solid #fff;
+}
+
+/* home page specific styles */
+
+#homePage {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: repeat(2, fr);
+  grid-template-rows: repeat(1, fr);
+  padding: 75px 15% 5%;
+  height: 100vh;
+}
+.colOne {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  align-self: center;
+  justify-self: center;
+}
+.colOne img {
+  max-width: 500px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.colTwo {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  color: #fff;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-self: center;
+}
+.colTwo h1 {
+  font-family: 'lato heavy';
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.35rem;
+}
+.colTwo h4 {
+  font-family: lato;
+  text-transform: uppercase;
+}
+
+.colTwo p {
+  max-width: 600px;
+  margin-top: 1.5rem;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  padding: 10px 0;
+}
+.colTwo i {
+  margin-top: 0.5rem;
+  display: flex;
+  align-self: end;
+  margin-right: 0;
+  font-size: 1.5rem;
+}
+/* footer */
+footer.homePage {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid #fff;
+}
+footer h4 {
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+}
+footer p {
+  font-size: 0.95rem;
+  font-family: 'lato light';
+}
