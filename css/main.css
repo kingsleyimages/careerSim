@@ -73,7 +73,7 @@ nav li a:active {
   border-top: 2px solid #fff;
 }
 
-/* home page specific styles */
+/* specific page layout */
 
 #homePage {
   background-color: rgba(0, 0, 0, 0.8);
@@ -87,18 +87,25 @@ nav li a:active {
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
   grid-template-columns: repeat(3, fr);
-  grid-template-rows: repeat(1, fr);
-  padding: 150px 15% 5%;
+  grid-template-rows: repeat(2, fr);
+  padding: 150px 5% 5%;
 }
-#aboutPage .colTwo {
-  max-height: 500px;
-  overflow-y: scroll;
+#portfolioPage {
+  background-color: rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: repeat(2, fr);
+  grid-template-rows: repeat(2, fr);
+  padding: 75px 15% 5%;
 }
+
+/* column definitions */
+
 .colOne {
   grid-column: 1/2;
   grid-row: 1/2;
 }
-.colOne img {
+#homePage .colOne img,
+#aboutPage .colOne img {
   max-width: 500px;
   height: auto;
   margin: 0 auto;
@@ -116,7 +123,16 @@ nav li a:active {
   grid-column: 3/4;
   grid-row: 1/2;
 }
-
+#aboutPage .colTwo {
+  grid-column: 2/4;
+}
+#aboutPage .colTwo.row {
+  grid-column: 2/3;
+}
+/* way to maintain column definitions, but switch row */
+#aboutPage .row {
+  grid-row: 2/3;
+}
 .colOne,
 .colTwo,
 .colThree {
@@ -126,6 +142,17 @@ nav li a:active {
   flex-direction: column;
   align-self: center;
   justify-self: center;
+}
+#aboutPage .colOne,
+#aboutPage .colTwo,
+#aboutPage .colThree,
+#portfolioPage .colOne,
+#portfolioPage .colTwo,
+#portfolioPage .colThree {
+  align-self: start;
+}
+.colOne.row {
+  padding: 0 20%;
 }
 .colTwo h1 {
   font-family: 'lato heavy';
@@ -138,7 +165,8 @@ nav li a:active {
   text-transform: uppercase;
 }
 
-.colTwo p:nth-of-type(1) {
+#aboutPage .colTwo p:nth-of-type(1),
+#portfolioPage p:nth-of-type(1) {
   max-width: 600px;
   margin: 1.5rem auto;
   border-top: 1px solid #fff;
@@ -152,14 +180,30 @@ nav li a:active {
   margin-right: 0;
   font-size: 1.5rem;
 }
+
+/* text styles about page */
+
 .skills h3,
 .education h3,
 .experience h3 {
+  font-size: 1.5rem;
   margin-bottom: 1.5rem;
   border-bottom: 1px solid #fff;
 }
+.education h4,
+.skills h4,
+.experience h4 {
+  font-family: lato;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
 .experience h4 {
   margin-top: 1.25rem;
+}
+.experience h5 {
+  font-size: 0.9rem;
 }
 .experience ul {
   margin-top: 1rem;
@@ -188,15 +232,17 @@ nav li a:active {
 .education summary {
   margin-bottom: 1rem;
 }
-.education summary h4 {
-  font-family: lato;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-bottom: 0.2rem;
-  font-size: 1rem;
-}
 .education summary p {
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+
+/* portfolio page */
+#portfolioPage img {
+  clear: both;
+  width: 70%;
+  max-width: 250px;
+  border: 1px solid #fff;
+  margin: 10px auto;
 }
 /* footer */
 footer {
