@@ -76,15 +76,15 @@ a:active {
 #homePage {
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
-  grid-template-columns: repeat(2, fr);
-  grid-template-rows: repeat(1, fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   padding: 150px 5% 5%;
 }
 #aboutPage {
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
-  grid-template-columns: repeat(3, fr);
-  grid-template-rows: repeat(2, fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   padding: 150px 5% 5%;
 }
 #portfolioPage {
@@ -110,6 +110,7 @@ a:active {
 }
 #aboutPage .colOne img {
   max-width: 350px;
+  width: 100%;
 }
 
 .colTwo {
@@ -134,9 +135,9 @@ a:active {
 .row2 {
   grid-row: 2/3;
 }
-.row3 {
+/* .row3 {
   grid-row: 3/4;
-}
+} */
 .colOne,
 .colTwo,
 .colThree {
@@ -189,7 +190,7 @@ a:active {
 /* containers */
 .skills,
 .education {
-  margin: 0 15%;
+  margin: 2% 0%;
 }
 
 /* text styles about page */
@@ -308,7 +309,7 @@ footer p {
 #contactForm {
   position: relative;
   padding: 0 2.5%;
-  flex-basis:700px
+  flex-basis: 700px;
 }
 #contactForm:before {
   content: '';
