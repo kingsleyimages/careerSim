@@ -94,6 +94,11 @@ a:active {
   grid-template-rows: repeat(2, fr);
   padding: 150px 5% 5%;
 }
+#thankYou {
+  margin-top: 100px;
+  text-align: center;
+  padding: 100px;
+}
 
 /* column definitions */
 
