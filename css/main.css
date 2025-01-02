@@ -28,7 +28,7 @@ li {
 }
 header {
   height: 75px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.85);
   color: #fff;
   position: fixed;
   top: 0;
@@ -76,15 +76,15 @@ a:active {
 #homePage {
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
-  grid-template-columns: repeat(2, fr);
-  grid-template-rows: repeat(1, fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   padding: 150px 5% 5%;
 }
 #aboutPage {
   background-color: rgba(0, 0, 0, 0.8);
   display: grid;
-  grid-template-columns: repeat(3, fr);
-  grid-template-rows: repeat(2, fr);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   padding: 150px 5% 5%;
 }
 #portfolioPage {
@@ -110,6 +110,7 @@ a:active {
 }
 #aboutPage .colOne img {
   max-width: 350px;
+  width: 100%;
 }
 
 .colTwo {
@@ -134,9 +135,9 @@ a:active {
 .row2 {
   grid-row: 2/3;
 }
-.row3 {
+/* .row3 {
   grid-row: 3/4;
-}
+} */
 .colOne,
 .colTwo,
 .colThree {
@@ -189,7 +190,7 @@ a:active {
 /* containers */
 .skills,
 .education {
-  margin: 0 15%;
+  margin: 2% 0%;
 }
 
 /* text styles about page */
@@ -303,4 +304,98 @@ footer h4 {
 footer p {
   font-size: 0.95rem;
   font-family: 'lato light';
+}
+/* contact */
+#contactForm {
+  position: relative;
+  padding: 0 2.5%;
+  flex-basis: 700px;
+}
+#contactForm:before {
+  content: '';
+  height: 80%;
+  width: 1px;
+  display: block;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#contactForm:after {
+  content: '';
+  height: 80%;
+  width: 1px;
+  display: block;
+  position: absolute;
+  top: 10%;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+#contactForm h4 {
+  margin-bottom: 10px;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 15px;
+}
+form div:nth-of-type(1) {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+}
+form div:nth-of-type(1) .grouping {
+  padding: 0 0 15px;
+}
+
+form div:nth-of-type(1) .grouping label {
+  width: 100%;
+  font-size: 0.8rem;
+
+  margin-bottom: 5px;
+}
+.grouping input,
+textarea {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 3px;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'lato light';
+}
+textarea::placeholder {
+  color: #fff;
+  padding: 5px;
+  font-size: 0.8rem;
+  font-family: 'lato light';
+}
+
+form div:nth-of-type(2) {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 0;
+  margin: 0;
+}
+form div:nth-of-type(3) {
+  grid-column: 1/3;
+  grid-row: 2/3;
+  justify-self: flex-end;
+  padding: 0;
+  margin: 0;
+  padding: 15px;
+  flex-grow: 2;
+  padding: 0;
+}
+form div:nth-of-type(3) input {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-right: 15px;
 }
